@@ -1,23 +1,26 @@
-import "./globals.css";
-import { PrismicPreview } from "@prismicio/next";
-import { repositoryName } from "@/prismicio";
-import { Inter as FontSans } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
 
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import './globals.css';
+import { PrismicPreview } from '@prismicio/next';
+import { repositoryName } from '@/prismicio';
+import { Inter as FontSans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 //Components
-import { Toaster } from "@/components/ui/sonner";
-import Header from "@/components/global/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-import Script from "next/script";
+import { Toaster } from '@/components/ui/sonner';
+import Header from '@/components/global/Header';
+import PageTransition from '@/components/PageTransition';
+import StairTransition from '@/components/StairTransition';
+import Script from 'next/script';
 
 const fontSans = FontSans({
-	subsets: ["latin"],
-	variable: "--font-sans",
+	subsets: ['latin'],
+	variable: '--font-sans',
 });
 
 export default function RootLayout({
@@ -29,12 +32,12 @@ export default function RootLayout({
 		<html lang='en' suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-background font-sans antialiased",
-					fontSans.variable
+					'bg-background font-sans antialiased',
+					fontSans.variable,
 				)}>
 				<ThemeProvider
 					attribute='class'
-					defaultTheme='dark'
+					defaultTheme='dark`'
 					enableSystem
 					disableTransitionOnChange>
 					<Header />
